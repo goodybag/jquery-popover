@@ -52,9 +52,13 @@ gulp
 
 While developing, we highly recommend live reloading via browsersync. As you
 change files in `/src`, browsersync will automatically inject and reload
-the page for you:
+the page for you.
+
+Also, make sure you are on the `gh-pages` branch because
+`master` does not contain the index.html which serves as a dev playground.
 
 ```shell
+git checkout gh-pages
 gulp serve
 ```
 
