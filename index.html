@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>jQuery Popover by Goodybag</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="vendor/normalize.css">
+        <link rel="stylesheet" href="dist/jquery-popover-0.0.0.css">
+        <link rel="stylesheet" href="demo.css">
+        <script src="vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-half">
+              <h1>jQuery Popover</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <p>The easiest way to get started is to use a barebones styled popover by adding your elements within the .popover-body element. </p>
+            <p>This way you have control of the contents in terms of mark up and styling. Additionally you don't need to mess with the .popover-* styles.</p>
+
+            <span class="popover-wrapper"><a href="#" data-role="popover" data-target="example-popover">Open</a>
+              <div class="popover-modal example-popover">
+                <div class="popover-body">
+                  <ul>
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>Services</li>
+                    <li>About</li>
+                  </ul>
+                </div>
+              </div>
+            </span>
+
+          </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="dist/jquery-popover-0.0.0.js"></script>
+        <script>
+        $(document).ready(function() {
+          $('[data-role="popover"]').gb_popover();
+        });
+        </script>
+    </body>
+</html>
