@@ -4,6 +4,8 @@ var minifyCSS     = require('gulp-minify-css');
 var uglify        = require('gulp-uglify');
 var ver           = require('gulp-ver');
 var path          = require('path');
+var browserSync   = require('browser-sync');
+var reload        = browserSync.reload;
 
 gulp.task('less', function() {
   return gulp.src('src/**/*.less')
@@ -12,7 +14,8 @@ gulp.task('less', function() {
     }))
     .pipe(minifyCSS())
     .pipe(ver())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('compress', function() {
@@ -20,6 +23,16 @@ gulp.task('compress', function() {
     .pipe(uglify())
     .pipe(ver())
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('serve', ['less'], function() {
+  browserSync({
+    server: {
+      baseDir: '.'
+    }
+  });
+
+  gulp.watch('src/**/*.less', ['less']);
 });
 
 gulp.task('default', [ 'less', 'compress' ]);

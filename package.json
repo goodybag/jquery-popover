@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/goodybag/jquery-popover",
   "dependencies": {
+    "browser-sync": "^2.7.1",
     "gulp": "^3.8.11",
     "gulp-less": "^3.0.3",
     "gulp-minify-css": "^1.1.1",
