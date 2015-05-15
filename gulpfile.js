@@ -22,10 +22,11 @@ gulp.task('compress', function() {
   return gulp.src('src/**/*.js')
     .pipe(uglify())
     .pipe(ver())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(reload({ stream: true }));
 });
 
-gulp.task('serve', ['less'], function() {
+gulp.task('serve', ['less', 'compress'], function() {
   browserSync({
     server: {
       baseDir: '.'
@@ -33,6 +34,7 @@ gulp.task('serve', ['less'], function() {
   });
 
   gulp.watch('src/**/*.less', ['less']);
+  gulp.watch('src/**/*.js', ['compress']);
 });
 
 gulp.task('default', [ 'less', 'compress' ]);

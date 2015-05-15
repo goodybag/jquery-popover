@@ -1,6 +1,6 @@
 ;(function ( $, window, document, undefined ) {
   'use strict';
-  
+
   var old = $.fn.gb_popover;
 
   var Popover = function(el, options) {
@@ -8,7 +8,6 @@
     this.options  = this.getOptions(options);
     this.$wrapper = this.$el.parents('.popover-wrapper').eq(0);
     this.$body    = this.$wrapper.find('.popover-body');
-    console.log('new popover created', el);
     this.listenEvents();
     return this;
   };
@@ -32,7 +31,6 @@
 
     // click outside to close modal
     $(document).click(function(e) {
-      console.log('shit!!!');
       if ( !this.$wrapper.hasClass('open') ){
         return;
       }
@@ -127,4 +125,3 @@
     return this;
   };
 })( jQuery, window, document );
-
