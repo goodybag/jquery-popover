@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>jQuery Popover by Goodybag</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="vendor/normalize.css">
+        <link rel="stylesheet" href="vendor/highlight.css">
+        <link rel="stylesheet" href="vendor/monokai-sublime.css">
+        <link rel="stylesheet" href="dist/jquery-popover-0.0.0.css">
+        <link rel="stylesheet" href="demo.css">
+        <script src="vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <a href="https://github.com/goodybag/jquery-popover"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-half">
+              <h1>jQuery Popover</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <h2>Install</h2>
+            <pre><code>bower install jquery-popover</code></pre>
+            <p>In your html, reference the latest versioned files from <code>/dist</code>.</p>
+            <pre><code>&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;bower_components/dist/jquery-popover-x.y.z.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script src=&quot;bower_components/dist/jquery-popover-x.y.z.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+          </div>
+
+          <div class="row">
+            <h2>Usage</h2
+            <p>Add popover markup</p>
+            <pre><code>&lt;span class=&quot;popover-wrapper&quot;&gt;
+  &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
+  &lt;div class=&quot;popover-modal example-popover&quot;&gt;
+    &lt;div class=&quot;popover-body&quot;&gt;
+      &lt;!-- contents here --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/span&gt;</code></pre>
+            <p>and enable them with jQuery</p>
+            <pre><code>$('[data-role="popover"]').popover();</code></pre>
+          </div>
+
+          <div class="row">
+            <h2>Basic Popover</h2>
+            <span class="popover-wrapper"><a href="#" data-role="popover" data-target="example-popover">Open</a>
+              <div class="popover-modal example-popover">
+                <div class="popover-body">
+                  <ul>
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>Services</li>
+                    <li>About</li>
+                  </ul>
+                </div>
+              </div>
+            </span>
+            <pre><code>&lt;span class=&quot;popover-wrapper&quot;&gt;
+  &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
+  &lt;div class=&quot;popover-modal example-popover&quot;&gt;
+    &lt;div class=&quot;popover-body&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Home&lt;/li&gt;
+        &lt;li&gt;Products&lt;/li&gt;
+        &lt;li&gt;Services&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/span&gt;</code></pre>
+          </div>
+
+          <div class="row">
+            <h2>Popover right-aligned</h2>
+            <p>Tag <code>.popover-modal</code> with <code>.right</code></p>
+            <span class="popover-wrapper right pull-right"><a href="#" data-role="popover" data-target="example-popover">Open</a>
+              <div class="popover-modal example-popover">
+                <div class="popover-body">
+                  <p>Hello world!</p>
+                </div>
+              </div>
+            </span>
+            <div class="clearfix"></div>
+            <pre><code>&lt;span class=&quot;popover-wrapper right&quot;&gt;
+  &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
+  &lt;div class=&quot;popover-modal example-popover&quot;&gt;
+    &lt;div class=&quot;popover-body&quot;&gt;
+      &lt;p&gt;Hello world!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/span&gt;</code></pre>
+          </div>
+
+          <div class="row">
+            <h2>Popover with close button</h2>
+            <p>To add a close button, just add <code>data-toggle-role="close"</code></p>
+            <span class="popover-wrapper"><a href="#" data-role="popover" data-target="example-popover">Open</a>
+              <div class="popover-modal example-popover">
+                <div class="popover-header">Title<a href="#" data-toggle-role="close" style="float: right">×</a></div>
+                <div class="popover-body popover-body-padded">
+                  <div>Hi</div>
+                </div>
+              </div>
+            </span>
+            <pre><code>&lt;span class=&quot;popover-wrapper&quot;&gt;
+  &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
+  &lt;div class=&quot;popover-modal example-popover&quot;&gt;
+    &lt;div class=&quot;popover-header&quot;&gt;Title
+      &lt;a href=&quot;#&quot; data-toggle-role=&quot;close&quot; style=&quot;float: right&quot;&gt;×&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;popover-body popover-body-padded&quot;&gt;
+      &lt;div&gt;Hi&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/span&gt;</code></pre>
+          </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="vendor/highlight.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="dist/jquery-popover-0.0.0.js"></script>
+        <script>
+        $(document).ready(function() {
+          $('[data-role="popover"]').popover();
+        });
+        </script>
+    </body>
+</html>
