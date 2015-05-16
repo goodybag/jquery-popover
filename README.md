@@ -5,7 +5,7 @@
 ## Install
 
 ```shell
-bower install goodybag-popover
+bower install jquery-popover
 ```
 
 In your html, reference the latest versioned files from `/dist`.
