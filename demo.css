@@ -11,6 +11,12 @@ body {
           box-sizing: border-box;
 }
 
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .row:after {
   content: "";
   display: table;
@@ -54,3 +60,6 @@ body {
   padding: 20px;
   color: #cad0d3;
 }
+
+.pull-left { float: left; }
+.pull-right { float: right; }

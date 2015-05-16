@@ -56,8 +56,8 @@
 &lt;/span&gt;</code></pre>
             <p>and enable them with jQuery</p>
             <pre><code>$('[data-role="popover"]').popover();</code></pre>
-
           </div>
+
           <div class="row">
             <h2>Basic Popover</h2>
             <span class="popover-wrapper"><a href="#" data-role="popover" data-target="example-popover">Open</a>
@@ -72,7 +72,6 @@
                 </div>
               </div>
             </span>
-
             <pre><code>&lt;span class=&quot;popover-wrapper&quot;&gt;
   &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
   &lt;div class=&quot;popover-modal example-popover&quot;&gt;
@@ -86,7 +85,27 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/span&gt;</code></pre>
+          </div>
 
+          <div class="row">
+            <h2>Popover right-aligned</h2>
+            <p>Tag <code>.popover-modal</code> with <code>.right</code></p>
+            <span class="popover-wrapper right pull-right"><a href="#" data-role="popover" data-target="example-popover">Open</a>
+              <div class="popover-modal example-popover">
+                <div class="popover-body">
+                  <p>Hello world!</p>
+                </div>
+              </div>
+            </span>
+            <div class="clearfix"></div>
+            <pre><code>&lt;span class=&quot;popover-wrapper right&quot;&gt;
+  &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
+  &lt;div class=&quot;popover-modal example-popover&quot;&gt;
+    &lt;div class=&quot;popover-body&quot;&gt;
+      &lt;p&gt;Hello world!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/span&gt;</code></pre>
           </div>
         </div>
 
