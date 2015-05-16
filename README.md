@@ -5,7 +5,7 @@
 ## Install
 
 ```shell
-bower install jquery-popover
+bower install gb-jquery-popover
 ```
 
 In your html, reference the latest versioned files from `/dist`.
