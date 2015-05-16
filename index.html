@@ -107,6 +107,30 @@
   &lt;/div&gt;
 &lt;/span&gt;</code></pre>
           </div>
+
+          <div class="row">
+            <h2>Popover with close button</h2>
+            <p>To add a close button, just add <code>data-toggle-role="close"</code></p>
+            <span class="popover-wrapper"><a href="#" data-role="popover" data-target="example-popover">Open</a>
+              <div class="popover-modal example-popover">
+                <div class="popover-header">Title<a href="#" data-toggle-role="close" style="float: right">×</a></div>
+                <div class="popover-body popover-body-padded">
+                  <div>Hi</div>
+                </div>
+              </div>
+            </span>
+            <pre><code>&lt;span class=&quot;popover-wrapper&quot;&gt;
+  &lt;a href=&quot;#&quot; data-role=&quot;popover&quot; data-target=&quot;example-popover&quot;&gt;Open&lt;/a&gt;
+  &lt;div class=&quot;popover-modal example-popover&quot;&gt;
+    &lt;div class=&quot;popover-header&quot;&gt;Title
+      &lt;a href=&quot;#&quot; data-toggle-role=&quot;close&quot; style=&quot;float: right&quot;&gt;×&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;popover-body popover-body-padded&quot;&gt;
+      &lt;div&gt;Hi&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/span&gt;</code></pre>
+          </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
