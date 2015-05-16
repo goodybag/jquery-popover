@@ -1,6 +1,6 @@
 {
   "name": "jquery-popover",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "jQuery popover plugin",
   "main": "gulpfile.js",
   "scripts": {
