@@ -1,7 +1,7 @@
 ;(function ( $, window, document, undefined ) {
   'use strict';
 
-  var old = $.fn.gb_popover;
+  var old = $.fn.popover;
 
   var Popover = function(el, options) {
     this.$el = $(el);
@@ -75,15 +75,6 @@
       this_.close();
     });
 
-    /*
-    this.$body.on( 'scroll', _.throttle( function( e ){
-      if ( e.target.scrollTop > 0 ){
-        this.$wrapper.addClass('has-scrolled');
-      } else {
-        this.$wrapper.removeClass('has-scrolled');
-      }
-    }, 50 ).bind( this ) );
-    */
     return this;
   };
 
@@ -105,7 +96,6 @@
   // PLUGIN DEFINITION
   var Plugin = function( options ){
     return this.each(function() {
-      console.log('plugin');
       var $this = $(this);
       var data = $this.data('gb.popover');
 
@@ -116,12 +106,12 @@
     });
   };
 
-  $.fn.gb_popover             = Plugin;
-  $.fn.gb_popover.Constructor = Popover;
+  $.fn.popover             = Plugin;
+  $.fn.popover.Constructor = Popover;
 
   // NO CONFLICT
-  $.fn.gb_popover.noConflict = function() {
-    $.fn.gb_popover = old;
+  $.fn.popover.noConflict = function() {
+    $.fn.popover = old;
     return this;
   };
 })( jQuery, window, document );
